@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <script src="jogo.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body onresize="ajustaTamanhoDaJanela()">
+        
+        <div class="painel">
+            <div class="vidas">
+                <img src="imagens/coracao_cheio.png" id="coracao1">
+                <img src="imagens/coracao_cheio.png" id="coracao2">
+                <img src="imagens/coracao_cheio.png" id="coracao3">
+            </div>
+            <div class="cronometro">
+                Tempo restante: <span id="tempo"></span>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById('tempo').innerHTML = tempo
+
+            let criaMosca = setInterval(function(){
+                posicaoRandom()
+            }, criarMosca)
+        </script>
+    </body>
+</html>
